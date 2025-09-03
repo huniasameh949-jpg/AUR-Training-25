@@ -5,8 +5,8 @@ import cv2
 
 def convolve(image,kernel):
     flip=np.flipud(np.fliplr(kernel))
-    pad_h=np.size(kernel,0)
-    pad_w=np.size(kernel,1)
+    pad_h=np.size(kernel,0)//2
+    pad_w=np.size(kernel,1)//2
     pad=np.pad(image,((pad_h,pad_h),(pad_w,pad_w)), mode='constant',constant_values=0)
     value=np.zeros_like(image,dtype=float)
 
@@ -46,4 +46,5 @@ axes[2, 1].set_title('median Image')
 axes[2, 1].axis('off')
 
 plt.tight_layout()
+
 plt.show()
