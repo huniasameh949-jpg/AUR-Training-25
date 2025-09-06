@@ -15,7 +15,7 @@ def convolve(image,kernel):
             frame=pad[i:i+np.size(kernel,0),j:j+np.size(kernel,1)]
             value[i,j]=np.sum(frame*flip)
     return value
-
+    
 img = cv2.imread('image.png', cv2.IMREAD_GRAYSCALE)
 fig, axes = plt.subplots(3, 2, figsize=(10, 12))
 
@@ -46,5 +46,4 @@ axes[2, 1].set_title('median Image')
 axes[2, 1].axis('off')
 
 plt.tight_layout()
-
 plt.show()
