@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: weather-pkg
+Version: 0.0.1
+Summary: Weather package for ROS2
+Maintainer: hunia
+Maintainer-email: hunia@example.com
+License: Apache-2.0
